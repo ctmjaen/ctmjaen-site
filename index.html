@@ -4,16 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CTM Jaén (Pruebas)</title>
-  <script>
-    if (location.protocol !== 'https:' || location.hostname === 'ctmjaen.com') {
-      location.replace(
-        'https://www.ctmjaen.com' +
-        location.pathname +
-        location.search +
-        location.hash
-      );
-    }
-  </script>
+  <!-- Pégalo en <head>, justo al final -->
+<script>
+  if (location.hostname === 'ctmjaen.com') {
+    // Redirige *solo* de naked domain → www subdominio
+    location.replace(
+      'https://www.ctmjaen.com' +
+      location.pathname +
+      location.search +
+      location.hash
+    );
+  }
+</script>
+
 </head>
 <body>
   <header>
