@@ -67,7 +67,7 @@
   <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
     <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
       <a href="#" class="flex items-center space-x-2">
-  <img src="logos/ctmjaen_escudo.jpeg" alt="Escudo CTM Jaén" class="h-10 w-10 object-contain rounded-full" />
+  <img src="logos/ctmjaen_escudo.jpeg" alt="Escudo CTM Jaén" class="h-10 w-10 object-contain rounded-full transition-transform duration-500 hover:rotate-180" />
   <span class="text-xl font-bold text-primary">CTM Jaén</span>
 </a>
 
@@ -102,7 +102,7 @@
     <section id="quienes-somos" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Quiénes somos</h2>
-        <p>Fundado en 1989, nuestro club promueve el tenis de mesa en Jaén con formación y competición a todos los niveles.</p>
+        <p>Club de Tenis de mesa de la Ciudad de Jaén, fundado en 1989, formación y competición a todos los niveles.</p>
       </div>
     </section>
 
@@ -127,17 +127,33 @@
       </div>
     </section>
 
-    <!-- Galería -->
-    <section id="galeria" class="py-16 bg-gray-50">
-      <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-4">Galería</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-          <img src="/images/partido1.jpg" alt="Partido de torneo" loading="lazy" class="rounded-lg shadow">
-          <img src="/images/entrenamiento.jpg" alt="Sesión de entrenamiento" loading="lazy" class="rounded-lg shadow">
-          <img src="/images/entrega-medallas.jpg" alt="Entrega de medallas" loading="lazy" class="rounded-lg shadow">
-        </div>
+
+<!-- Galería -->
+<section id="galeria" class="py-16 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-4 text-center">Galería</h2>
+
+    <div class="relative overflow-hidden rounded-lg shadow-lg h-80">
+      <div id="carousel" class="flex transition-transform duration-700 ease-in-out h-full">
+        <img src="./images/ctmjaen_partido.jpg" alt="Partido de torneo" loading="lazy" class="w-full flex-shrink-0 object-cover h-full">
+        <img src="./images/ctmjaen_entrenamiento.jpg" alt="Sesión de entrenamiento" loading="lazy" class="w-full flex-shrink-0 object-cover h-full">
       </div>
-    </section>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const totalSlides = carousel.children.length;
+  let index = 0;
+
+  setInterval(() => {
+    index = (index + 1) % totalSlides;
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }, 3000); // cambia cada 3 segundos
+</script>
+
+
 
 <!-- Redes Sociales -->
 <section id="social" class="py-16 bg-gray-50">
@@ -250,7 +266,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46-.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z"/>
         </svg>
-        <span class="font-medium">610 93 99 78</span>
+        <span class="font-medium">Juanma Anera</span>
       </a>
 
       <a href="https://wa.me/34657223753" target="_blank"
@@ -258,7 +274,7 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
           <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z"/>
         </svg>
-        <span class="font-medium">657 22 37 53</span>
+        <span class="font-medium">Felipe Lorente</span>
       </a>
     </div>
     <a href="mailto:info@ctmjaen.com"
