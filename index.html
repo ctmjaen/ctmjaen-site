@@ -11,7 +11,7 @@
 
   <!-- SEO Básico -->
   <title>Club Deportivo CTM Jaén – Tenis de Mesa Jaén</title>
-  <meta name="description" content="Club Deportivo CTM Jaén: entrenamientos, competiciones, horarios y noticias de tenis de mesa en Jaén." />
+  <meta name="description" content="Club Deportivo CTM Jaén: Escuela y competiciones de tenis de mesa en Jaén. Horarios, entrenamientos y eventos." />
   <link rel="canonical" href="https://www.ctmjaen.com/" />
 
   <!-- Open Graph -->
@@ -21,26 +21,33 @@
   <meta property="og:url"         content="https://www.ctmjaen.com/" />
   <meta property="og:image"       content="https://www.ctmjaen.com/hero-image.jpg" />
 
-  <!-- JSON-LD -->
+  <!-- JSON-LD: SportsClub con reseñas -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SportsClub","name":"Club Deportivo CTM Jaén","url":"https://www.ctmjaen.com/","logo":"https://www.ctmjaen.com/logo.png","description":"Club de tenis de mesa en Jaén: entrenamientos, competiciones y eventos.","address":{"@type":"PostalAddress","addressLocality":"Jaén","addressCountry":"ES"},"openingHours":["Mo-Fr 18:00-21:00","Sa 10:00-14:00"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@ctmjaen.com"}}
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsClub",
+    "name":"Club Deportivo CTM Jaén",
+    "url":"https://www.ctmjaen.com/",
+    "logo":"https://www.ctmjaen.com/logo.png",
+    "description":"Club de tenis de mesa en Jaén: entrenamientos, competiciones y eventos.",
+    "address":{"@type":"PostalAddress","addressLocality":"Jaén","addressCountry":"ES"},
+    "geo":{"@type":"GeoCoordinates","latitude":"37.773","longitude":"-3.796"},
+    "openingHours":["Mo-Fr 18:00-21:00","Sa 10:00-14:00"],
+    "contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@ctmjaen.com"},
+    "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"6"}
+  }
   </script>
 
   <!-- Tailwind + Alpine.js -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
-    tailwind.config = {
-      theme: { extend: { colors: { primary: '#1E40AF', accent: '#F59E0B' } }, fontFamily: { sans: ['Montserrat', 'sans-serif'] } }
-    };
+    tailwind.config = { theme: { extend: { colors: { primary: '#1E40AF', accent: '#F59E0B' } }, fontFamily: { sans: ['Montserrat','sans-serif'] } } };
   </script>
   <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
   <!-- CSS personalizado -->
   <style>
-    /* Tabla responsive */
-    @media (max-width: 640px) {
-      table { display: block; overflow-x: auto; }
-    }
+    @media (max-width: 640px) { table { display: block; overflow-x: auto; } }
   </style>
 </head>
 <body class="antialiased text-gray-800 font-sans">
@@ -48,7 +55,7 @@
   <!-- Skip to Content -->
   <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 rounded">Saltar al contenido</a>
 
-  <!-- Navbar fija -->
+  <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
     <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
       <a href="#" class="text-xl font-bold text-primary">CTM Jaén</a>
@@ -56,7 +63,7 @@
         <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
       </button>
-      <ul :class="navOpen ? 'block' : 'hidden'" class="sm:flex space-x-6"> 
+      <ul :class="navOpen ? 'block' : 'hidden'" class="sm:flex space-x-6">
         <li><a href="#quienes-somos" class="block py-2 hover:text-accent">Quiénes somos</a></li>
         <li><a href="#actividades" class="block py-2 hover:text-accent">Actividades</a></li>
         <li><a href="#galeria" class="block py-2 hover:text-accent">Galería</a></li>
@@ -66,7 +73,7 @@
   </nav>
 
   <!-- Hero -->
-  <header class="bg-primary text-white h-screen flex items-center justify-center" id="hero">
+  <header id="hero" class="bg-primary text-white h-screen flex items-center justify-center">
     <div class="text-center px-6">
       <h1 class="text-5xl font-bold mb-4">Club Deportivo CTM Jaén</h1>
       <p class="text-xl mb-8">¡Bienvenid@ a nuestro club de tenis de mesa!</p>
@@ -74,33 +81,32 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main -->
   <main id="main" class="pt-24">
     <!-- Quiénes somos -->
     <section id="quienes-somos" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Quiénes somos</h2>
-        <p>Club deportivo fundado en el 1989, dedicados a promover este deporte. Nuestra misión es brindar formación, competir a alto nivel y fomentar la convivencia.</p>
+        <p>Fundado en 1989, nuestro club promueve el tenis de mesa en Jaén con formación y competición a todos los niveles.</p>
       </div>
     </section>
 
-    <!-- Actividades y Horarios -->
+    <!-- Actividades -->
     <section id="actividades" class="py-16">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Actividades y Horarios</h2>
-        <table class="w-full text-left border-collapse"> <!-- responsive con CSS -->
+        <table class="w-full text-left border-collapse">
           <thead class="bg-primary text-white">
             <tr><th class="p-3">Día</th><th class="p-3">Hora</th><th class="p-3">Actividad</th><th class="p-3">Entrenador</th></tr>
           </thead>
           <tbody>
-            <tr class="border-b"><td class="p-3">Lunes</td><td class="p-3">18:00 - 20:00</td><td class="p-3">Entrenamiento Adultos</td><td class="p-3">Juan Pérez</td></tr>
-            <!-- más filas -->
+            <tr class="border-b"><td class="p-3">Lunes</td><td class="p-3">18:00-20:00</td><td class="p-3">Adultos</td><td class="p-3">Juan Pérez</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Galería de imágenes -->
+    <!-- Galería -->
     <section id="galeria" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Galería</h2>
@@ -108,7 +114,6 @@
           <img src="/images/partido1.jpg" alt="Partido de torneo" loading="lazy" class="rounded-lg shadow">
           <img src="/images/entrenamiento.jpg" alt="Sesión de entrenamiento" loading="lazy" class="rounded-lg shadow">
           <img src="/images/entrega-medallas.jpg" alt="Entrega de medallas" loading="lazy" class="rounded-lg shadow">
-          <!-- más imágenes -->
         </div>
       </div>
     </section>
@@ -117,14 +122,18 @@
     <section id="contacto" class="py-16">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-        <form action="#" method="POST" class="space-y-4">
-          <div><label for="nombre" class="block font-medium mb-1">Nombre</label><input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2"></div>
-          <div><label for="email" class="block font-medium mb-1">Email</label><input type="email" id="email" name="email" required class="w-full border rounded p-2"></div>
-          <div><label for="mensaje" class="block font-medium mb-1">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2"></textarea></div>
-          <button type="submit" class="bg-primary text-white font-semibold py-2 px-4 rounded hover:opacity-90 transition">Enviar</button>
-        </form>
-        <div class="mt-8">
-          <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="flex flex-col sm:flex-row sm:space-x-6 mb-8">
+          <a href="https://wa.me/34610939978" target="_blank" class="flex items-center bg-green-500 text-white rounded-lg py-2 px-4 hover:bg-green-600 transition mb-4 sm:mb-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0..."/></svg>
+            610 93 99 78
+          </a>
+          <a href="https://wa.me/34657223753" target="_blank" class="flex items-center bg-green-500 text-white rounded-lg py-2 px-4 hover:bg-green-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A11.94 11.94 0..."/></svg>
+            657 22 37 53
+          </a>
+        </div>
+        <div class="mb-8">
+          <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCyM65C_ea3k00t0YHa2j-H8vhOBneI1uU&q=place_id:ChIJ5eYLkZ_XbQ0RUXi_rKiX4Z0" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
     </section>
