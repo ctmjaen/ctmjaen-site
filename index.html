@@ -1,54 +1,82 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" x-data="{ navOpen: false }" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CTM Jaén</title>
 
-  <!-- Tailwind Play CDN: solo para desarrollo y pruebas rápidas -->
+  <!-- Preconnect y Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- SEO Básico -->
+  <title>Club Deportivo CTM Jaén – Tenis de Mesa en Jaén</title>
+  <meta name="description" content="Club Deportivo CTM Jaén: entrenamientos, competiciones, horarios y noticias de tenis de mesa en Jaén." />
+  <link rel="canonical" href="https://www.ctmjaen.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Club Deportivo CTM Jaén" />
+  <meta property="og:description" content="Entrenamientos, competiciones y noticias de tenis de mesa en Jaén." />
+  <meta property="og:url"         content="https://www.ctmjaen.com/" />
+  <meta property="og:image"       content="https://www.ctmjaen.com/hero-image.jpg" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SportsClub","name":"Club Deportivo CTM Jaén","url":"https://www.ctmjaen.com/","logo":"https://www.ctmjaen.com/logo.png","description":"Club de tenis de mesa en Jaén: entrenamientos, competiciones y eventos.","address":{"@type":"PostalAddress","addressLocality":"Jaén","addressCountry":"ES"},"openingHours":["Mo-Fr 18:00-21:00","Sa 10:00-14:00"],"contactPoint":{"@type":"ContactPoint","contactType":"customer support","email":"info@ctmjaen.com"}}
+  </script>
+
+  <!-- Tailwind + Alpine.js -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1E40AF',   // Azul oscuro
-            accent:  '#F59E0B'    // Amarillo/acento
-          }
-        }
-      }
-    }
+      theme: { extend: { colors: { primary: '#1E40AF', accent: '#F59E0B' } }, fontFamily: { sans: ['Montserrat', 'sans-serif'] } }
+    };
   </script>
+  <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+  <!-- CSS personalizado -->
+  <style>
+    /* Tabla responsive */
+    @media (max-width: 640px) {
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
 </head>
-<body class="antialiased text-gray-800">
+<body class="antialiased text-gray-800 font-sans">
+
+  <!-- Skip to Content -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 rounded">Saltar al contenido</a>
 
   <!-- Navbar fija -->
-  <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
+  <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
     <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
       <a href="#" class="text-xl font-bold text-primary">CTM Jaén</a>
-      <ul class="flex space-x-6">
-        <li><a href="#quienes-somos" class="hover:text-accent">Quiénes somos</a></li>
-        <li><a href="#actividades" class="hover:text-accent">Actividades</a></li>
-        <li><a href="#contacto" class="hover:text-accent">Contacto</a></li>
+      <button @click="navOpen = !navOpen" class="sm:hidden p-2 focus:outline-none">
+        <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <ul :class="navOpen ? 'block' : 'hidden'" class="sm:flex space-x-6"> 
+        <li><a href="#quienes-somos" class="block py-2 hover:text-accent">Quiénes somos</a></li>
+        <li><a href="#actividades" class="block py-2 hover:text-accent">Actividades</a></li>
+        <li><a href="#galeria" class="block py-2 hover:text-accent">Galería</a></li>
+        <li><a href="#contacto" class="block py-2 hover:text-accent">Contacto</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Hero -->
-  <header class="bg-primary text-white h-screen flex items-center justify-center">
+  <header class="bg-primary text-white h-screen flex items-center justify-center" id="hero">
     <div class="text-center px-6">
       <h1 class="text-5xl font-bold mb-4">Club Deportivo CTM Jaén</h1>
       <p class="text-xl mb-8">¡Bienvenid@ a nuestro club de tenis de mesa!</p>
-      <a href="#quienes-somos"
-         class="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:opacity-90 transition">
-        Conócenos
-      </a>
+      <a href="#quienes-somos" class="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:opacity-90 transition">Conócenos</a>
     </div>
   </header>
 
-  <!-- Contenido principal -->
-  <main class="pt-20">
-    <!-- Sección: Quiénes somos -->
+  <!-- Main Content -->
+  <main id="main" class="pt-24">
+    <!-- Quiénes somos -->
     <section id="quienes-somos" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Quiénes somos</h2>
@@ -56,59 +84,48 @@
       </div>
     </section>
 
-    <!-- Sección: Actividades y Horarios -->
+    <!-- Actividades y Horarios -->
     <section id="actividades" class="py-16">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Actividades y Horarios</h2>
-        <!-- Ejemplo de tabla simple -->
-        <table class="w-full text-left border-collapse">
+        <table class="w-full text-left border-collapse"> <!-- responsive con CSS -->
           <thead class="bg-primary text-white">
-            <tr>
-              <th class="p-3">Día</th>
-              <th class="p-3">Hora</th>
-              <th class="p-3">Actividad</th>
-              <th class="p-3">Entrenador</th>
-            </tr>
+            <tr><th class="p-3">Día</th><th class="p-3">Hora</th><th class="p-3">Actividad</th><th class="p-3">Entrenador</th></tr>
           </thead>
           <tbody>
-            <tr class="border-b">
-              <td class="p-3">Lunes</td>
-              <td class="p-3">18:00 - 20:00</td>
-              <td class="p-3">Entrenamiento Adultos</td>
-              <td class="p-3">Juan Pérez</td>
-            </tr>
-            <!-- Añade más filas según necesites -->
+            <tr class="border-b"><td class="p-3">Lunes</td><td class="p-3">18:00 - 20:00</td><td class="p-3">Entrenamiento Adultos</td><td class="p-3">Juan Pérez</td></tr>
+            <!-- más filas -->
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- Sección: Contacto -->
-    <section id="contacto" class="py-16 bg-gray-50">
+    <!-- Galería de imágenes -->
+    <section id="galeria" class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-4">Galería</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <img src="/images/partido1.jpg" alt="Partido de torneo" loading="lazy" class="rounded-lg shadow">
+          <img src="/images/entrenamiento.jpg" alt="Sesión de entrenamiento" loading="lazy" class="rounded-lg shadow">
+          <img src="/images/entrega-medallas.jpg" alt="Entrega de medallas" loading="lazy" class="rounded-lg shadow">
+          <!-- más imágenes -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-16">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Contacto</h2>
-        <!-- Formulario simple -->
         <form action="#" method="POST" class="space-y-4">
-          <div>
-            <label for="nombre" class="block font-medium mb-1">Nombre</label>
-            <input type="text" id="nombre" name="nombre" required
-                   class="w-full border rounded p-2" />
-          </div>
-          <div>
-            <label for="email" class="block font-medium mb-1">Email</label>
-            <input type="email" id="email" name="email" required
-                   class="w-full border rounded p-2" />
-          </div>
-          <div>
-            <label for="mensaje" class="block font-medium mb-1">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required
-                      class="w-full border rounded p-2"></textarea>
-          </div>
-          <button type="submit"
-                  class="bg-primary text-white font-semibold py-2 px-4 rounded hover:opacity-90 transition">
-            Enviar
-          </button>
+          <div><label for="nombre" class="block font-medium mb-1">Nombre</label><input type="text" id="nombre" name="nombre" required class="w-full border rounded p-2"></div>
+          <div><label for="email" class="block font-medium mb-1">Email</label><input type="email" id="email" name="email" required class="w-full border rounded p-2"></div>
+          <div><label for="mensaje" class="block font-medium mb-1">Mensaje</label><textarea id="mensaje" name="mensaje" rows="4" required class="w-full border rounded p-2"></textarea></div>
+          <button type="submit" class="bg-primary text-white font-semibold py-2 px-4 rounded hover:opacity-90 transition">Enviar</button>
         </form>
+        <div class="mt-8">
+          <iframe src="https://www.google.com/maps/embed?..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -119,6 +136,5 @@
       <p>© 2025 CTM Jaén. Todos los derechos reservados.</p>
     </div>
   </footer>
-
 </body>
 </html>
