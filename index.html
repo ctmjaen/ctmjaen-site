@@ -66,7 +66,11 @@
   <!-- Navbar -->
   <nav class="fixed top-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
     <div class="max-w-4xl mx-auto flex items-center justify-between p-4">
-      <a href="#" class="text-xl font-bold text-primary">CTM Jaén</a>
+      <a href="#" class="flex items-center space-x-2">
+  <img src="logos/ctmjaen_escudo.jpeg" alt="Escudo CTM Jaén" class="h-10 w-10 object-contain rounded-full" />
+  <span class="text-xl font-bold text-primary">CTM Jaén</span>
+</a>
+
       <button @click="navOpen = !navOpen" class="sm:hidden p-2 focus:outline-none">
         <svg x-show="!navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         <svg x-show="navOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
@@ -257,17 +261,29 @@
         <span class="font-medium">657 22 37 53</span>
       </a>
     </div>
+    <a href="mailto:info@ctmjaen.com"
+   class="flex items-center bg-blue-600 text-white rounded-lg py-3 px-5 hover:bg-blue-700 transition mt-4 sm:mt-0">
+  <!-- Icono de correo -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+    <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2l-10 6.25L2 5.2V4zm0 3.4l9.55 5.97a1 1 0 001.05 0L22 7.4V20a2 2 0 01-2 2H4a2 2 0 01-2-2V7.4z"/>
+  </svg>
+  <span class="font-medium">info@ctmjaen.com</span>
+</a>
+
+<div class="my-12 border-t-2 border-gray-200 w-full"></div>
 
     <!-- Mapa Google Maps -->
         <div class="mb-8">
-          <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCyM65C_ea3k00t0YHa2j-H8vhOBneI1uU&q=place_id:ChIJ5eYLkZ_XbQ0RUXi_rKiX4Z0"
-            width="100%"
-            height="300"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy">
+<iframe
+  class="rounded-lg shadow-lg ring-1 ring-gray-300"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCyM65C_ea3k00t0YHa2j-H8vhOBneI1uU&q=place_id:ChIJ5eYLkZ_XbQ0RUXi_rKiX4Z0"
+  width="100%"
+  height="300"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy">
 </iframe>
+
         </div>
       </div>
     </section>
@@ -276,7 +292,7 @@
   <!-- Footer -->
   <footer class="bg-gray-800 text-gray-300 py-6">
     <div class="max-w-4xl mx-auto text-center px-6">
-      <p>© 2025 CTM Jaén. Todos los derechos reservados.</p>
+      <p>© 2025 CTM Jaén - info@ctmjaen.com - Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
