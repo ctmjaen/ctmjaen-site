@@ -81,6 +81,7 @@
 <ul :class="navOpen ? 'block' : 'hidden'" class="sm:flex space-x-6">
   <li><a href="#quienes-somos" class="block py-2 hover:text-accent">Quiénes somos</a></li>
   <li><a href="#actividades" class="block py-2 hover:text-accent">Actividades</a></li>
+  <li><a href="#competicion" class="block py-2 hover:text-accent">Competición</a></li>
   <li><a href="#galeria" class="block py-2 hover:text-accent">Galería</a></li>
   <li><a href="#social" class="block py-2 hover:text-accent">Redes</a></li>
   <li><a href="#patrocinadores" class="block py-2 hover:text-accent">Patrocinadores</a></li>
@@ -96,7 +97,7 @@
   <img src="images/cto-esp-2023.png" alt=="Jugadores de tenis de mesa del CTM Jaén en campeonato de España 2023" class="absolute inset-0 w-full h-full object-cover opacity-70 z-0" />
   <div class="relative z-10 text-center px-6">
     <h1 class="text-5xl font-bold mb-4">Club Deportivo CTM Jaén</h1>
-    <p class="text-xl mb-8">¡Bienvenid@ a nuestro club de tenis de mesa!</p>
+    <p class="text-xl mb-8">¡Bienvenid@ a nuestro club de Tenis de Mesa!</p>
     <a href="#quienes-somos" class="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:opacity-90 transition">Conócenos</a>
   </div>
 </header>
@@ -108,7 +109,12 @@
     <section id="quienes-somos" class="py-16 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold mb-4">Quiénes somos</h2>
-        <p>Club de Tenis de mesa de la Ciudad de Jaén, fundado en 1989, formación y competición a todos los niveles.</p>
+        <p>
+
+    El Club Deportivo CTM Jaén es una entidad con más de tres décadas de historia, dedicada a la promoción y práctica del tenis de mesa en la ciudad de Jaén. Fundado en 1989, nuestro club combina la formación de base con la competición de alto nivel, ofreciendo un espacio donde deportistas de todas las edades pueden crecer, aprender y disfrutar.
+
+    Nos enorgullece fomentar valores como el esfuerzo, la constancia y el compañerismo, dentro y fuera de la pista. Ya seas principiante o jugador experimentado, en CTM Jaén encontrarás un equipo comprometido, entrenadores titulados y un ambiente familiar que te hará sentir parte de algo grande.
+</p>
       </div>
     </section>
 
@@ -133,129 +139,202 @@
       </div>
     </section>
 
+<!-- Competiciones actuales -->
+<section id="competicion" class="py-16 bg-white">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Competiciones en curso</h2>
+    <p class="mb-6 text-center text-gray-700">
+      Nuestros equipos participan activamente en competiciones oficiales a nivel nacional y autonómico, representando a Jaén con orgullo y compromiso.
+    </p>
+
+    <ul class="space-y-4">
+      <!-- Nacionales -->
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://www.rfetm.es/images/logo.png" alt="RFETM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">1ª División Nac. Española Femenina</h3>
+          <p class="text-sm text-gray-600">Equipo femenino compitiendo a nivel nacional en la temporada actual.</p>
+        </div>
+      </li>
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://www.rfetm.es/images/logo.png" alt="RFETM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">2ª División Nac. Española Masculina</h3>
+          <p class="text-sm text-gray-600">Equipo masculino compitiendo a nivel nacional en la temporada actual.</p>
+        </div>
+      </li>
+
+      <!-- Autonómicas -->
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://fatm.eu/wp-content/uploads/2023/12/logo_fatm.png" alt="FATM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">Liga Andalucía</h3>
+          <p class="text-sm text-gray-600">Equipo compitiendo a nivel autonómico en la temporada actual.</p>
+        </div>
+      </li>
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://fatm.eu/wp-content/uploads/2023/12/logo_fatm.png" alt="FATM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">Super División Andaluza</h3>
+          <p class="text-sm text-gray-600">Equipo compitiendo a nivel autonómico en la temporada actual.</p>
+        </div>
+      </li>
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://fatm.eu/wp-content/uploads/2023/12/logo_fatm.png" alt="FATM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">División de Honor Andaluza</h3>
+          <p class="text-sm text-gray-600">Equipo compitiendo a nivel autonómico en la temporada actual.</p>
+        </div>
+      </li>
+
+      <!-- Veteranos -->
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://fatm.eu/wp-content/uploads/2023/12/logo_fatm.png" alt="FATM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">Superdivisión Andaluza de Veteranos</h3>
+          <p class="text-sm text-gray-600">Equipo de veteranos compitiendo a nivel autonómico en la temporada actual.</p>
+        </div>
+      </li>
+      <li class="flex items-center space-x-4 border border-gray-200 rounded-lg p-4 shadow-sm">
+        <img src="https://fatm.eu/wp-content/uploads/2023/12/logo_fatm.png" alt="FATM" class="h-10 w-10 object-contain">
+        <div>
+          <h3 class="text-lg font-semibold text-primary">División de Honor Andaluza de Veteranos</h3>
+          <p class="text-sm text-gray-600">Equipo de veteranos compitiendo a nivel autonómico en la temporada actual.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
 
 <!-- Galería -->
 <section id="galeria" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-4 text-center">Galería</h2>
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-6 text-center">Galería</h2>
 
-    <div class="relative overflow-hidden rounded-lg shadow-lg h-80">
-      <div id="carousel" class="flex transition-transform duration-700 ease-in-out h-full">
-        <img src="./images/ctmjaen_partido.jpg" alt="Partido de torneo" loading="lazy" class="w-full flex-shrink-0 object-cover h-full">
-        <img src="./images/ctmjaen_entrenamiento.jpg" alt="Sesión de entrenamiento" loading="lazy" class="w-full flex-shrink-0 object-cover h-full">
+    <div x-data="{ active: 0, images: ['images/ctmjaen_partido.jpg', 'images/ctmjaen_entrenamiento.jpg'] }" class="relative overflow-hidden rounded-lg shadow-lg">
+      <div class="relative h-80">
+        <template x-for="(img, index) in images" :key="index">
+          <img :src="img" x-show="active === index" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500" />
+        </template>
+      </div>
+
+      <!-- Botones de navegación -->
+      <div class="absolute inset-0 flex items-center justify-between px-4">
+        <button @click="active = (active - 1 + images.length) % images.length"
+                class="bg-white/70 hover:bg-white text-gray-800 font-bold py-2 px-3 rounded-full shadow">
+          ‹
+        </button>
+        <button @click="active = (active + 1) % images.length"
+                class="bg-white/70 hover:bg-white text-gray-800 font-bold py-2 px-3 rounded-full shadow">
+          ›
+        </button>
+      </div>
+
+      <!-- Indicadores -->
+      <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <template x-for="(img, index) in images" :key="index">
+          <button @click="active = index"
+                  :class="{'bg-primary': active === index, 'bg-white': active !== index}"
+                  class="w-3 h-3 rounded-full border border-gray-300"></button>
+        </template>
       </div>
     </div>
   </div>
 </section>
-
-<script>
-  const carousel = document.getElementById('carousel');
-  const totalSlides = carousel.children.length;
-  let index = 0;
-
-  setInterval(() => {
-    index = (index + 1) % totalSlides;
-    carousel.style.transform = `translateX(-${index * 100}%)`;
-  }, 3000); // cambia cada 3 segundos
-</script>
-
-
 
 <!-- Redes Sociales -->
-<section id="social" class="py-16 bg-gray-50">
-  <div class="max-w-4xl mx-auto px-6">
-    <h2 class="text-3xl font-bold mb-6 text-center">Síguenos en nuestras redes</h2>
-    <div class="space-y-8">
+<div class="flex flex-col space-y-8">
+  <!-- Instagram + YouTube en una fila -->
+  <div class="flex flex-col sm:flex-row sm:space-x-8 justify-center items-start">
+    
+    <!-- Instagram -->
+    <div class="flex flex-col items-center space-y-4 max-w-xs">
+      <a href="https://www.instagram.com/ctmjaen" target="_blank"
+         class="inline-flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 hover:shadow-md transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" class="h-5 w-5">
+        <span class="text-gray-800 font-medium">@ctmjaen</span>
+      </a>
+      <blockquote class="instagram-media w-full"
+                  data-instgrm-permalink="https://www.instagram.com/p/C_VDvJBNnJd/"
+                  data-instgrm-version="14"
+                  style="width:100%; max-width:300px; margin:0 auto;">
+      </blockquote>
+    </div>
 
-      <!-- Instagram -->
-      <div class="text-center">
-        <a href="https://www.instagram.com/ctmjaen" target="_blank"
-           class="inline-flex items-center justify-center bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-pink-600 transition mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7zm5.8-1.65a1.05 1.05 0 11-2.1 0 1.05 1.05 0 012.1 0z"/>
-          </svg>
-          <span>@ctmjaen</span>
-        </a>
-        <blockquote class="instagram-media mx-auto"
-                    data-instgrm-permalink="https://www.instagram.com/p/C_VDvJBNnJd/"
-                    data-instgrm-version="14"
-                    style="width:100%;max-width:300px;margin:0 auto;">
-        </blockquote>
+    <!-- YouTube -->
+    <div class="flex flex-col items-center space-y-4 max-w-xs">
+      <a href="https://www.youtube.com/@CTMJaen" target="_blank"
+         class="inline-flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 hover:shadow-md transition">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube" class="h-5">
+        <span class="text-gray-800 font-medium">CTM Jaen YouTube</span>
+      </a>
+      <div class="relative w-full" style="padding-top: 56.25%;">
+        <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow"
+                src="https://www.youtube.com/embed/0GXzF6hA4Uo"
+                title="Vídeo destacado"
+                frameborder="0"
+                allowfullscreen>
+        </iframe>
       </div>
-
-      <!-- YouTube -->
-      <div class="text-center">
-        <a href="https://www.youtube.com/@CTMJaen" target="_blank"
-           class="inline-flex items-center justify-center bg-red-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-red-700 transition mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M10 15l5.19-3L10 9v6zm11.54-3c0-1.37-.11-2.58-.32-3.62-.19-.9-.86-1.61-1.76-1.8C18.58 6 12 6 12 6s-6.58 0-7.46.58c-.9.19-1.57.9-1.76 1.8C2.57 9.42 2.46 10.63 2.46 12s.11 2.58.32 3.62c.19.9.86 1.61 1.76 1.8C5.42 18 12 18 12 18s6.58 0 7.46-.58c.9-.19 1.57-.9 1.76-1.8.21-1.04.32-2.25.32-3.62z"/>
-          </svg>
-          <span>CTM Jaen YouTube</span>
-        </a>
-        <div class="relative" style="padding-top:56.25%">
-          <iframe class="absolute top-0 left-0 w-full h-full rounded-lg shadow"
-                  src="https://www.youtube.com/embed/0GXzF6hA4Uo"
-                  title="Vídeo destacado"
-                  frameborder="0"
-                  allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-
-      <!-- Twitch (solo botón) -->
-      <div class="text-center">
-        <a href="https://www.twitch.tv/ctmjaen2020" target="_blank"
-           class="inline-flex items-center justify-center bg-purple-600 text-white font-semibold py-2 px-4 rounded-lg shadow hover:bg-purple-700 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4.27 0l-2 2v16l4-4h6l6 4h4V2a2 2 0 00-2-2H4.27zm14.73 13H12l-2 2v-2H6V3h13v10z"/>
-          </svg>
-          <span>CTM Jaen Twitch</span>
-        </a>
-      </div>
-
     </div>
   </div>
-  <script async src="https://www.instagram.com/embed.js"></script>
-</section>
+
+  <!-- Twitch debajo -->
+  <div class="text-center">
+    <a href="https://www.twitch.tv/ctmjaen2020" target="_blank"
+       class="inline-flex items-center space-x-2 border border-gray-300 rounded-lg px-3 py-2 hover:shadow-md transition">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Twitch_logo.svg" alt="Twitch" class="h-5">
+      <span class="text-gray-800 font-medium">CTM Jaen Twitch</span>
+    </a>
+  </div>
+</div>
+
+<!-- Instagram embed script -->
+<script async src="https://www.instagram.com/embed.js"></script>
+
 
 <!-- Patrocinadores -->
 <section id="patrocinadores" class="py-16 bg-white">
-  <div class="max-w-4xl mx-auto px-6">
+  <div class="max-w-6xl mx-auto px-6">
     <h2 class="text-3xl font-bold mb-6 text-center">Nuestros Patrocinadores</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
 
-      <!-- Destacado AMSYSTEM (izquierda) -->
+    <div class="flex flex-wrap justify-center items-start gap-6">
+      <!-- Patrocinador Principal -->
       <a href="https://amsystem.es/" target="_blank"
-         class="flex flex-col items-center justify-center bg-primary/10 p-6 rounded-lg shadow-lg border-2 border-primary">
-        <img src="logos/amsystem.png" alt="AM System" class="h-32 object-contain mb-4" />
-        <span class="font-semibold text-primary">Patrocinador Principal</span>
+         class="flex flex-col items-center justify-center bg-primary/10 p-6 rounded-lg shadow-lg border-4 border-primary w-48">
+        <img src="logos/amsystem.png" alt="AM System" class="h-32 object-contain transition-transform duration-300 hover:scale-110" />
+        <span class="font-semibold text-primary text-center">Patrocinador Principal</span>
       </a>
 
-      <!-- Patrocinadores secundarios (derecha) -->
-      <div class="grid grid-cols-2 gap-6">
-        <a href="http://restauranteventuccio.com/" target="_blank" class="flex justify-center items-center">
-          <img src="logos/ventuccio.png" alt="Restaurante Ventuccio" class="h-16 object-contain" />
-        </a>
+      <!-- Patrocinador Intermedio: Ventuccio -->
+      <a href="http://restauranteventuccio.com/" target="_blank"
+         class="flex flex-col items-center justify-center bg-yellow-50 p-4 rounded-lg shadow-md border-2 border-yellow-400 w-40">
+        <img src="logos/ventuccio.png" alt="Restaurante Ventuccio" class="h-24 object-contain transition-transform duration-300 hover:scale-110" />
+        <span class="text-yellow-800 font-semibold text-center text-sm">Patrocinador Destacado</span>
+      </a>
+
+      <!-- Resto de patrocinadores agrupados -->
+      <div class="flex flex-wrap justify-center items-center bg-gray-100 p-4 rounded-lg shadow w-full sm:w-auto gap-4">
         <a href="https://tucsegur.es/" target="_blank" class="flex justify-center items-center">
-          <img src="logos/tucsegur.png" alt="Tuc Segur" class="h-16 object-contain" />
+          <img src="logos/tucsegur.png" alt="Tuc Segur" class="h-16 object-contain transition-transform duration-300 hover:scale-110" />
         </a>
         <a href="http://opticasuarezjaen.es/" target="_blank" class="flex justify-center items-center">
-          <img src="logos/opticasuarez.png" alt="Ópticas Suárez Jaén" class="h-16 object-contain" />
+          <img src="logos/opticasuarez.png" alt="Ópticas Suárez Jaén" class="h-16 object-contain transition-transform duration-300 hover:scale-110" />
         </a>
         <a href="http://aircity.es/" target="_blank" class="flex justify-center items-center">
-          <img src="logos/aircity.jpg" alt="Air City" class="h-16 object-contain" />
+          <img src="logos/aircity.jpg" alt="Air City" class="h-16 object-contain transition-transform duration-300 hover:scale-110" />
         </a>
         <a href="https://instagram.com/el_plato_lleno?igshid=MzRlODBiNWFlZA==" target="_blank" class="flex justify-center items-center">
-          <img src="logos/plato_lleno.jpg" alt="El Plato Lleno" class="h-16 object-contain" />
+          <img src="logos/plato_lleno.jpg" alt="El Plato Lleno" class="h-16 object-contain transition-transform duration-300 hover:scale-110" />
         </a>
         <a href="https://bekacocinas.es/" target="_blank" class="flex justify-center items-center">
-          <img src="logos/bekacocinas.png" alt="Beka Cocinas" class="h-16 object-contain" />
+          <img src="logos/bekacocinas.png" alt="Beka Cocinas" class="h-16 object-contain transition-transform duration-300 hover:scale-110" />
         </a>
       </div>
-
     </div>
   </div>
 </section>
+
 
 
 <!-- Contacto -->
@@ -264,33 +343,35 @@
     <h2 class="text-3xl font-bold mb-6">Contactos</h2>
 
     <!-- Botones de WhatsApp -->
-    <div class="flex flex-col sm:flex-row sm:space-x-6 mb-8">
-      <!-- Usando SVG inline (más fiable) -->
-      <a href="https://wa.me/34610939978" target="_blank"
-         class="flex items-center bg-green-500 text-white rounded-lg py-3 px-5 hover:bg-green-600 transition mb-4 sm:mb-0">
-        <!-- SVG de WhatsApp inline -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46-.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z"/>
-        </svg>
-        <span class="font-medium">Juanma Anera</span>
-      </a>
+    <div class="flex flex-col sm:flex-row sm:space-x-6 mb-8 items-center">
+  <!-- WhatsApp Juanma -->
+  <a href="https://wa.me/34610939978" target="_blank"
+     class="flex items-center bg-green-500 text-white rounded-lg py-3 px-5 hover:bg-green-600 transition mb-4 sm:mb-0">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z" />
+    </svg>
+    <span class="font-medium">Juanma Anera</span>
+  </a>
 
-      <a href="https://wa.me/34657223753" target="_blank"
-         class="flex items-center bg-green-500 text-white rounded-lg py-3 px-5 hover:bg-green-600 transition">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z"/>
-        </svg>
-        <span class="font-medium">Felipe Lorente</span>
-      </a>
-    </div>
-    <a href="mailto:info@ctmjaen.com"
-   class="flex items-center bg-blue-600 text-white rounded-lg py-3 px-5 hover:bg-blue-700 transition mt-4 sm:mt-0">
-  <!-- Icono de correo -->
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2l-10 6.25L2 5.2V4zm0 3.4l9.55 5.97a1 1 0 001.05 0L22 7.4V20a2 2 0 01-2 2H4a2 2 0 01-2-2V7.4z"/>
-  </svg>
-  <span class="font-medium">info@ctmjaen.com</span>
-</a>
+  <!-- WhatsApp Felipe -->
+  <a href="https://wa.me/34657223753" target="_blank"
+     class="flex items-center bg-green-500 text-white rounded-lg py-3 px-5 hover:bg-green-600 transition mb-4 sm:mb-0">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.94 11.94 0 0012 0C5.37 0 0 5.37 0 12c0 2.12.55 4.16 1.60 5.96L0 24l6.18-1.57A11.95 11.95 0 0012 24c6.63 0 12-5.37 12-12 0-3.20-1.25-6.20-3.48-8.52zm-8.52 18.59c-1.94 0-3.84-.52-5.45-1.51l-.39-.24-3.67.93.98-3.58-.25-.37A9.92 9.92 0 012.03 12 9.97 9.97 0 0112 2.03 9.97 9.97 0 0121.97 12 9.97 9.97 0 0112 22.07zm5.45-7.78c-.29-.15-1.71-.84-1.98-.94-.27-.10-.46.15-.65.15s-.75.93-.92 1.12c-.18.19-.36.21-.66.07-.29-.15-1.23-.45-2.34-1.45-.87-.78-1.46-1.73-1.63-2.02-.17-.29-.02-.45.13-.60.13-.13.29-.36.43-.54.14-.18.19-.31.29-.51.10-.19.05-.36-.03-.51-.08-.15-.65-1.56-.89-2.14-.23-.56-.47-.49-.65-.50l-.55-.01c-.18 0-.51.07-.78.36s-1.02 1-1.02 2.48 1.05 2.89 1.20 3.09c.15.19 2.08 3.17 5.05 4.44.71.31 1.26.50 1.69.64.71.23 1.36.20 1.87.12.57-.09 1.71-.70 1.95-1.38.23-.69.23-1.29.16-1.38-.07-.09-.26-.15-.55-.29z" />
+    </svg>
+    <span class="font-medium">Felipe Lorente</span>
+  </a>
+
+  <!-- Correo electrónico -->
+  <a href="mailto:info@ctmjaen.com"
+     class="flex items-center bg-blue-600 text-white rounded-lg py-3 px-5 hover:bg-blue-700 transition">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v1.2l-10 6.25L2 5.2V4zm0 3.4l9.55 5.97a1 1 0 001.05 0L22 7.4V20a2 2 0 01-2 2H4a2 2 0 01-2-2V7.4z" />
+    </svg>
+    <span class="font-medium">info@ctmjaen.com</span>
+  </a>
+</div>
+
 
 <div class="my-12 border-t-2 border-gray-200 w-full"></div>
 
